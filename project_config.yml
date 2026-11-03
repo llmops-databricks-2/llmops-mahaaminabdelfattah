@@ -1,5 +1,7 @@
 # Project configuration for the LLMOps course, filled in for you at onboarding.
 # Resources are provisioned at onboarding except the volume, which you create during the course.
+# embedding_endpoint is the serving endpoint for ai_query, AI Search and DatabricksServingEndpoint;
+# embedding_service is the AI Gateway model service for the OpenAI client (README.md).
 
 # Your usage policy: set it on every serverless job, endpoint and app you create.
 usage_policy_id: "2fd0adf4-931d-33bf-9293-55de3d8d0487"
@@ -13,8 +15,9 @@ dev:
   schema: "mahaaminabdelfattah"
   volume: "arxiv_files"
   llm_endpoint: "course_ops.gateway.chat"
-  embedding_endpoint: "course_ops.gateway.embed"
-  warehouse_id: "0471a8260f00ef55"
+  embedding_endpoint: "databricks-gte-large-en"
+  embedding_service: "course_ops.gateway.embed"
+  warehouse_id: "61f599f72eb5dcfe"
   experiment_path: "/llmops/mahaaminabdelfattah-dev"
   # Your provisioned Lakebase project.
   lakebase_instance: "lb-llmops-mahaaminabdelfattah"
@@ -25,8 +28,9 @@ acc:
   schema: "mahaaminabdelfattah"
   volume: "arxiv_files"
   llm_endpoint: "course_ops.gateway.chat"
-  embedding_endpoint: "course_ops.gateway.embed"
-  warehouse_id: "0471a8260f00ef55"
+  embedding_endpoint: "databricks-gte-large-en"
+  embedding_service: "course_ops.gateway.embed"
+  warehouse_id: "61f599f72eb5dcfe"
   experiment_path: "/llmops/mahaaminabdelfattah-acc"
   # Your provisioned Lakebase project for this environment.
   lakebase_instance: "lb-llmops-mahaaminabdelfattah"
@@ -37,8 +41,9 @@ prd:
   schema: "mahaaminabdelfattah"
   volume: "arxiv_files"
   llm_endpoint: "course_ops.gateway.chat"
-  embedding_endpoint: "course_ops.gateway.embed"
-  warehouse_id: "0471a8260f00ef55"
+  embedding_endpoint: "databricks-gte-large-en"
+  embedding_service: "course_ops.gateway.embed"
+  warehouse_id: "61f599f72eb5dcfe"
   experiment_path: "/llmops/mahaaminabdelfattah-prd"
   # Your provisioned Lakebase project for this environment.
   lakebase_instance: "lb-llmops-mahaaminabdelfattah"
